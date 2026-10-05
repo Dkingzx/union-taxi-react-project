@@ -1,0 +1,144 @@
+:root {
+            --base-font-size: 16px;
+        }
+
+        html {
+            font-size: var(--base-font-size);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAF9;
+            color: #1F2937;
+            overflow-x: hidden;
+        }
+
+        /* Senior Citizen Font Magnifier Scaling */
+        [data-text-scale="100"] { --base-font-size: 16px; }
+        [data-text-scale="115"] { --base-font-size: 18.4px; }
+        [data-text-scale="130"] { --base-font-size: 20.8px; }
+
+        /* Scroll Reveal Effect */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Tactile Trending Buttons */
+        .btn-tactile-primary {
+            background: linear-gradient(135deg, #FFC72C 0%, #E69500 100%);
+            color: #111827;
+            font-weight: 800;
+            border-radius: 9999px;
+            box-shadow: 0 8px 20px -4px rgba(230, 149, 0, 0.4);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-tactile-primary:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 12px 28px -4px rgba(230, 149, 0, 0.6);
+        }
+
+        .btn-tactile-primary:active {
+            transform: translateY(1px) scale(0.98);
+        }
+
+        .btn-tactile-secondary {
+            background: #FFFFFF;
+            color: #1F2937;
+            font-weight: 700;
+            border: 2px solid #E5E7EB;
+            border-radius: 9999px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.25s ease;
+        }
+
+        .btn-tactile-secondary:hover {
+            border-color: #FFC72C;
+            color: #D97706;
+            transform: translateY(-2px);
+        }
+
+        /* Taxi Checker Strip */
+        .taxi-checker-strip {
+            background-image: repeating-linear-gradient(
+                90deg,
+                #111827 0px,
+                #111827 16px,
+                #FFC72C 16px,
+                #FFC72C 32px
+            );
+            height: 6px;
+            width: 100%;
+        }
+
+        /* Interactive Road Dividers for Moving Taxis */
+        .road-divider {
+            position: relative;
+            height: 56px;
+            background: #18181B;
+            overflow: hidden;
+            border-top: 3px solid #FFC72C;
+            border-bottom: 3px solid #FFC72C;
+        }
+
+        .road-dashes {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            transform: translateY(-50%);
+            background-image: linear-gradient(to right, #FFC72C 50%, transparent 50%);
+            background-size: 36px 100%;
+            animation: dashMove 0.8s linear infinite;
+        }
+
+        @keyframes dashMove {
+            0% { background-position: 0 0; }
+            100% { background-position: -36px 0; }
+        }
+
+        .scroll-cab {
+            position: absolute;
+            top: 10px;
+            height: 36px;
+            width: auto;
+            z-index: 10;
+            transition: transform 0.1s ease-out;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+        }
+
+        /* Top Progress Bar Track */
+        #road-progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: #374151;
+            z-index: 100;
+        }
+
+        #road-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #FFC72C, #E69500);
+            width: 0%;
+            position: relative;
+        }
+
+        #scrolling-top-taxi {
+            position: absolute;
+            right: -16px;
+            top: -12px;
+            width: 32px;
+            height: 20px;
+        }
+
+/* React conversion fixes */

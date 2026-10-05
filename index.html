@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth" data-text-scale="100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Union Taxi - Safe, reliable and accessible cab services across India." />
+    <title>Union Taxi - Safe, Reliable & Accessible Cab Services Across India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                yellow: '#FFC72C',
+                amber: '#D97706',
+                dark: '#111827',
+                lightBg: '#FAFAF9',
+                cardBg: '#FFFFFF',
+                text: '#1F2937',
+                muted: '#4B5563',
+                border: '#E5E7EB'
+              }
+            },
+            fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+            boxShadow: {
+              tactile: '0 8px 24px -4px rgba(217, 119, 6, 0.25), 0 4px 12px rgba(0, 0, 0, 0.05)',
+              glow: '0 12px 32px -4px rgba(255, 199, 44, 0.6)'
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body class="relative min-h-screen selection:bg-brand-yellow selection:text-black">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
